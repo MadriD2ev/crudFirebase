@@ -1,3 +1,5 @@
+//los datos los proporciona firestore desde su sitio Web
+
 export const environment = {
   production: false,
   firebase: {

@@ -1,0 +1,37 @@
+<div class="alert alert-warning" role="alert" *ngFor="let item of items">
+    {{item.name}} 
+    <!-- {{item.id}} -->
+    <div class="float-right" (click)="eliminar(item)"> <!-- El item es todo lo que viaja, el nombre y id, todos los campos que se establecieron-->
+        <i class="fas fa-trash"></i>
+    </div>  
+    <div class="float-right mx-3" (click)="editar(item)" data-toggle="modal" data-target="#exampleModal"> 
+        <i class="far fa-edit"></i>
+    </div> 
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Editar: {{editarItem.name}}</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <form (ngSubmit)="agregarItemEditado()">
+                <input 
+                    type="text" placeholder="Edita tarea" 
+                    name="name" class="form-control"
+                    [(ngModel)] = "editarItem.name"
+                >
+                <button class="btn btn-warning mt-3" type="submit">Editar</button>     
+            </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+    </div>
+</div>
