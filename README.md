@@ -28,6 +28,9 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## CRUD terminado
 
+![crud](https://user-images.githubusercontent.com/68882204/94096851-bfc8bd80-fdea-11ea-81b6-1ee8f9e8e692.jpeg)
+
+
 ## Referencias online
 
 * https://github.com/angular/angularfire
